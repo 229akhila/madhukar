@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangali Madhukar | Electrical & Electronics Engineer Portfolio</title>
+    <link rel="icon" href="./favicon-32x32.png">
+    <meta name="description"
+        content="Portfolio of Mangali Madhukar, a detail-oriented Electrical & Electronics Graduate specializing in Substation Operating, MATLAB/Simulink, Power Electronics, and Smart Energy Systems.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle Circuit Canvas Background -->
+    <canvas id="circuitCanvas"></canvas>
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-accent">&lt;</span>M.Madhukar<span class="logo-accent">/&gt;</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link btn-nav">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I am <span class="highlight">Mangali Madhukar</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    I'm a <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    A motivated and detail-oriented Electrical & Electronics Engineering graduate looking to apply
+                    skills in power electronics, circuit diagnostics, and MATLAB simulation to solve complex electrical
+                    engineering challenges.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary"><i class="fa-solid fa-bolt"></i> View Projects</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="mailto:mangalimadhu09@gmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/mangali-madhukar-21339a419" target="_blank"
+                        rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <span class="location-badge"><i class="fa-solid fa-location-dot"></i> Pulkal, TG, India</span>
+                </div>
+            </div>
+            <div class="hero-graphic">
+                <div class="image-box">
+                    <div class="glass-frame"></div>
+                    <img src="madhu2.photo.jpeg" alt="mangali-madhukar Profile Avatar" class="profile-img"
+                        onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=akhila&backgroundColor=0f172a'">
+
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about" aria-label="Scroll Down">
+                <span class="mouse-icon">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+    <!-- About & Education Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Profile</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-info">
+                    <h3>My Objective</h3>
+                    <p>
+                        Motivated and detail-oriented graduate looking for an entry-level position where I can apply my
+                        skills, learn new technologies, and contribute to organizational growth while developing my
+                        professional career.
+                    </p>
+                    <p>
+                        With a solid foundation in Electrical & Electronics Engineering, I specialize in substation
+                        operations, circuit diagnostics, and numerical simulations. I look forward to working on
+                        renewable systems, power grids, and smart grid automation.
+                    </p>
+                    <div class="languages-box">
+                        <h4><i class="fa-solid fa-language"></i> Languages Known</h4>
+                        <div class="lang-tags">
+                            <span class="lang-tag">English (Professional)</span>
+                            <span class="lang-tag">Telugu (Native)</span>
+                            <span class="lang-tag">Hindi (Conversational)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <h3>Education Journey</h3>
+                    <div class="timeline education-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">B-Tech | EEE</div>
+                            <div class="timeline-content">
+                                <h4>Malla Reddy College of Engineering and Technology (2022-2025)</h4>
+                                <p>Electrical & Electronics Engineering</p>
+                                <span class="score-badge">CGPA: 8.13</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Diploma | EEE</div>
+                            <div class="timeline-content">
+                                <h4>Sri Sangameshwara Govt Polytechnic-Zaheerabad (2019-2022)</h4>
+                                <p>Electrical & Electronics Engineering</p>
+                                <span class="score-badge">CGPA: 9.56</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">10th Standard</div>
+                            <div class="timeline-content">
+                                <h4>Z P High School-Thogarpally, Sangareddy District (2018-2019)</h4>
+                                <p>Secondary Education</p>
+                                <span class="score-badge">CGPA: 9.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Capabilities</span>
+                <h2 class="section-title">Technical & Soft Skills</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Core Skills -->
+                <div class="skills-category">
+                    <h3><i class="fa-solid fa-gears"></i> Core Technical Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MATLAB / Simulink</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Power Electronics</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Substation Operations (33kv/11kv)</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Electrical Machines & Drives</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Circuit Troubleshooting & Diagnostics</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Electrical Wiring</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Test Equipment Operation</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Microsoft Tools</span>
+
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="skills-category">
+                    <h3><i class="fa-solid fa-users"></i> Soft Skills</h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-card">
+                            <i class="fa-solid fa-comments"></i>
+                            <h4>Communication</h4>
+                            <p>Articulating ideas clearly in technical reviews and reports.</p>
+                        </div>
+                        <div class="soft-skill-card">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <h4>Self-confidence</h4>
+                            <p>Taking ownership of electrical engineering problems and solutions.</p>
+                        </div>
+                        <div class="soft-skill-card">
+                            <i class="fa-solid fa-list-check"></i>
+                            <h4>Project Management</h4>
+                            <p>Organizing tasks and simulations to deliver results on time.</p>
+                        </div>
+                        <div class="soft-skill-card">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <h4>Innovation</h4>
+                            <p>Applying alternative design topologies in power electronic control.</p>
+                        </div>
+                        <div class="soft-skill-card">
+                            <i class="fa-solid fa-sliders"></i>
+                            <h4>Adaptability</h4>
+                            <p>Quick adjustment to new tools, simulation programs, or field rules.</p>
+                        </div>
+                        <div class="soft-skill-card">
+                            <i class="fa-solid fa-rocket"></i>
+                            <h4>Quick Learner</h4>
+                            <p>Rapidly adopting technologies like Smart Meter systems and switchgears.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Professional Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Career History</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="experience-timeline">
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="exp-meta">
+                        <span class="exp-duration">Aug 2021 – Jan 2022</span>
+                        <h3 class="exp-title">TGSPDCL 33kv/11kv Substation</h3>
+                        <span class="exp-sub">Substation Operation Intern | Sangareddy Town-2</span>
+                    </div>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Gained hands-on experience in real-time operation and monitoring of 33kv/11kv electrical
+                                distribution substation equipment.</li>
+                            <li>Learned the operations of power transformers, circuit breakers, relays, and busbars.
+                            </li>
+                            <li>Assisted in implementing electrical safety protocols, power load switching, and logging
+                                power line metrics.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fa-solid fa-industry"></i></div>
+                    <div class="exp-meta">
+                        <span class="exp-duration">May 2024</span>
+                        <h3 class="exp-title">BHEL (Bharat Heavy Electricals Ltd)</h3>
+                        <span class="exp-sub">Vocational Training Intern | Ramachandrapuram, HYD</span>
+                    </div>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Underwent intensive internship training covering generator manufacturing, steam
+                                turbines, and testing.</li>
+                            <li>Studied standard procedures for heavy electrical machine assembly, testing, and quality
+                                control.</li>
+                            <li>Observed heavy control panels, exciter systems, and power switchgears operating inside
+                                the plant.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <div class="exp-meta">
+                        <span class="exp-duration">Jul 2024 – Dec 2024</span>
+                        <h3 class="exp-title">Electrical Switchgear & Applications</h3>
+                        <span class="exp-sub">DBSON Training Course</span>
+                    </div>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Completed specialized course on modern electrical switchgear systems and low/medium
+                                voltage panel distribution.</li>
+                            <li>Gained theoretical and practical exposure to relays, fuses, contactors, MCCBs, and
+                                circuit breakers.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="exp-meta">
+                        <span class="exp-duration">Aug 2023 – Present</span>
+                        <h3 class="exp-title">MATLAB Simulation & Training</h3>
+                        <span class="exp-sub">Simulation Workshop & Internships</span>
+                    </div>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Extensive hands-on experience in MATLAB and Simulink models for designing power systems,
+                                control loops, and solar PV integrations.</li>
+                            <li>Analyzed dynamic systems, tuned PID control parameters, and simulated power converters.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <div class="exp-meta">
+                        <span class="exp-duration">Academic Focus</span>
+                        <h3 class="exp-title">Smart Energy Meters Study</h3>
+                        <span class="exp-sub">Practical Knowledge Application</span>
+                    </div>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Acquired practical knowledge on error detection, correction systems, and configuration
+                                profiles for modern smart energy meters.</li>
+                            <li>Explored automatic reading technologies, energy monitoring metrics, and grid-interface
+                                protocols.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fa-solid fa-building-flag"></i></div>
+                    <div class="exp-meta">
+                        <span class="exp-duration">One-Day Visit</span>
+                        <h3 class="exp-title">Kakatiya Thermal Power Project</h3>
+                        <span class="exp-sub">Industrial Visit | Chelpur, Jayashankar Bhupalpally</span>
+                    </div>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Explored large-scale thermal electricity generation processes, boiler operation, coal
+                                handling plants, and steam turbine units.</li>
+                            <li>Observed the central control room operation, power evacuation lines, and cooling tower
+                                mechanisms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Engineering Work</span>
+                <h2 class="section-title">Technical Projects</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-project="solar-inverter">
+                    <div class="project-img-wrapper">
+                        <div class="project-icon-placeholder"><i class="fa-solid fa-solar-panel"></i></div>
+                        <span class="project-tag-pill">Hardware / Simulation</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Solar Inverter Design</h3>
+                        <p class="project-desc-short">Designed and simulated a solar inverter topology that converts
+                            direct current (DC) generated by solar panels to alternating current (AC)...</p>
+                        <div class="project-tech">
+                            <span>DC-AC Inverter</span>
+                            <span>Solar PV</span>
+                            <span>Power Switches</span>
+                        </div>
+                        <button class="btn-project-detail">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card" data-project="tank-water">
+                    <div class="project-img-wrapper">
+                        <div class="project-icon-placeholder"><i class="fa-solid fa-water"></i></div>
+                        <span class="project-tag-pill">Control Systems</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>PID & Fuzzy Tank Control</h3>
+                        <p class="project-desc-short">Engineered a simulated closed-loop system in MATLAB/Simulink that
+                            regulates tank water levels using advanced Fuzzy logic and PID controllers...</p>
+                        <div class="project-tech">
+                            <span>MATLAB</span>
+                            <span>Simulink</span>
+                            <span>Fuzzy Logic</span>
+                            <span>PID</span>
+                        </div>
+                        <button class="btn-project-detail">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card" data-project="boost-converter">
+                    <div class="project-img-wrapper">
+                        <div class="project-img-wrapper">
+                            <div class="project-icon-placeholder"><i class="fa-solid fa-charging-station"></i></div>
+                            <span class="project-tag-pill">Power Electronics</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Boost Converter Design</h3>
+                        <p class="project-desc-short">Designed and modeled a high-efficiency DC-DC Boost Converter in
+                            MATLAB/Simulink, detailing component selection for inductor, capacitor, and MOSFET...</p>
+                        <div class="project-tech">
+                            <span>DC-DC Boost</span>
+                            <span>MATLAB</span>
+                            <span>Simulink</span>
+                            <span>Switching</span>
+                        </div>
+                        <button class="btn-project-detail">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card" data-project="mppt-charge">
+                    <div class="project-img-wrapper">
+                        <div class="project-icon-placeholder"><i class="fa-solid fa-battery-three-quarters"></i></div>
+                        <span class="project-tag-pill">Battery Systems</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>MPPT Charge Controller</h3>
+                        <p class="project-desc-short">Developed an MPPT Charge Controller model tailored for standalone
+                            Lead Acid Battery Systems to maximize solar array output and optimize charging...</p>
+                        <div class="project-tech">
+                            <span>MPPT</span>
+                            <span>Lead-Acid Battery</span>
+                            <span>Solar Array</span>
+                            <span>PWM</span>
+                        </div>
+                        <button class="btn-project-detail">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card" data-project="pv-grid">
+                    <div class="project-img-wrapper">
+                        <div class="project-icon-placeholder"><i class="fa-solid fa-network-wired"></i></div>
+                        <span class="project-tag-pill">Renewable Energy</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Photovoltaic Grid Connection</h3>
+                        <p class="project-desc-short">Simulated a grid-connected photovoltaic system featuring Perturb &
+                            Observe (P&O) MPPT control to ensure stable synchronization with power grids...</p>
+                        <div class="project-tech">
+                            <span>Grid Connection</span>
+                            <span>P&O Algorithm</span>
+                            <span>Simulink</span>
+                            <span>PV Array</span>
+                        </div>
+                        <button class="btn-project-detail">Learn More <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements & Research Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Key Milestones</span>
+                <h2 class="section-title">Achievements & Publications</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="achievements-grid">
+                <!-- Research Paper Card -->
+                <div class="paper-card">
+                    <div class="paper-badge"><i class="fa-solid fa-file-invoice"></i> Published Research Paper</div>
+                    <h3>Simulation and Performance Evaluation of P&O MPPT Algorithm for Off-Grid and Grid-Connected
+                        Solar PV Applications</h3>
+                    <p class="paper-desc">
+                        A detailed research paper examining the design, modeling, and performance comparison of the
+                        Perturb and Observe (P&O) Maximum Power Point Tracking (MPPT) algorithm. The study validates
+                        performance efficiency across standalone configurations and utility grids under variable solar
+                        irradiance conditions.
+                    </p>
+                    <div class="paper-keywords">
+                        <span><i class="fa-solid fa-tag"></i> Solar PV Systems</span>
+                        <span><i class="fa-solid fa-tag"></i> P&O MPPT</span>
+                        <span><i class="fa-solid fa-tag"></i> Simulink Analysis</span>
+                        <span><i class="fa-solid fa-tag"></i> Power Grid</span>
+                    </div>
+                </div>
+                <!-- Secondary Achievements -->
+                <div class="other-achievements">
+                    <div class="achieve-item">
+                        <div class="achieve-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <div class="achieve-content">
+                            <h4>District Level Sports & Games Meet (2019)</h4>
+                            <p>Active participation in Inter-Polytechnic Sports & Games, proving excellent team
+                                coordination, spirit, and sportsmanship.</p>
+                        </div>
+                    </div>
+                    <div class="achieve-item">
+                        <div class="achieve-icon"><i class="fa-solid fa-flask"></i></div>
+                        <div class="achieve-content">
+                            <h4>Mandal Level Science Fair</h4>
+                            <p>Exhibited scientific models representing innovations in energy saving and green
+                                electronics applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Connect With Me</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+
+
+                    <div class="contact-details">
+                        <div class="c-detail-item">
+                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="c-text">
+                                <span>Email Me</span>
+                                <a href="mailto:mangalimadhu09@gmail.com">mangalimadhu09@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="c-detail-item">
+                            <div class="c-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="c-text">
+                                <span>LinkedIn Profile</span>
+                                <a
+                                    href="https://www.linkedin.com/in/mangali-madhukar-21339a419">linkedin.com/in/mangali-madhukar</a>
+                            </div>
+                        </div>
+                        <div class="c-detail-item">
+                            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="c-text">
+                                <span>Location</span>
+                                <p>Pulkal, Sangareddy Dist, Telangana, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2026 Mangali Madhukar. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="https://www.linkedin.com/in/mangali-madhukar-21339a419" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Interactive Details Modal for Projects -->
+    <div id="projectModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-wrapper">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-category">Project Category</span>
+                <h2 id="modalTitle">Project Title</h2>
+                <div class="modal-tech-list" id="modalTech">
+                    <!-- Dynamic tag generation -->
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-desc" id="modalDesc">
+                    <!-- Dynamic description -->
+                </div>
+
+                <!-- Circuit / Simulation Interactive Playground! -->
+                <div class="modal-simulation-box">
+                    <div class="sim-header">
+                        <span><i class="fa-solid fa-chart-line"></i> Interactive Simulation Preview</span>
+                        <button class="btn-sim-action" id="btnSimTrigger"><i class="fa-solid fa-play"></i> Run
+                            Simulation</button>
+                    </div>
+                    <div class="sim-view" id="simView">
+                        <div class="sim-placeholder">Click 'Run Simulation' to load MATLAB/Simulink interactive control
+                            graph...</div>
+                        <!-- Dynamic Canvas or Charts go here -->
+                        <canvas id="simCanvas"></canvas>
+                    </div>
+                    <div class="sim-data" id="simData">
+                        <!-- Dynamic text status -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
