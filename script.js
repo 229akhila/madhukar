@@ -1,11 +1,20 @@
 // JavaScript Functionality - Mangali Madhukar Portfolio
 document.addEventListener('DOMContentLoaded', () => {
+
     initCircuitBackground();
+
     initTypewriter();
+
     initMobileMenu();
+
     initActiveNavOnScroll();
+
     initContactForm();
+
     initProjectModals();
+
+    initCertificateModal();
+
 });
 /* ==========================================
    1. Interactive Circuit Canvas Background
@@ -22,7 +31,7 @@ function initCircuitBackground() {
     });
     const nodes = [];
     const maxNodes = Math.min(60, Math.floor((width * height) / 25000));
-    
+
     // Create random electronic nodes
     for (let i = 0; i < maxNodes; i++) {
         nodes.push({
@@ -36,7 +45,7 @@ function initCircuitBackground() {
     }
     function drawCircuit() {
         ctx.clearRect(0, 0, width, height);
-        
+
         // Draw grid lines
         ctx.strokeStyle = 'rgba(56, 189, 248, 0.03)';
         ctx.lineWidth = 1;
@@ -61,7 +70,7 @@ function initCircuitBackground() {
                 if (dist < 150) {
                     const alpha = (1 - dist / 150) * 0.12;
                     ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
-                    
+
                     // Draw orthogonal L-shaped routing (like circuit board traces)
                     ctx.beginPath();
                     ctx.moveTo(nodes[i].x, nodes[i].y);
@@ -110,9 +119,9 @@ function initTypewriter() {
     if (!textElement) return;
     const phrases = [
         'Electrical & Electronics Engineer',
-        'Power Electronics Enthusiast',
-        'MATLAB / Simulink Developer',
-        'Substation Operations Intern',
+        'Enthusiast in Electrical Machines',
+        'Enthusiast in Electrical Wiring ',
+        'Substation Operation',
         'Quick Learner & Innovator'
     ];
     let phraseIndex = 0;
@@ -121,7 +130,7 @@ function initTypewriter() {
     let typingSpeed = 100;
     function type() {
         const currentPhrase = phrases[phraseIndex];
-        
+
         if (isDeleting) {
             textElement.textContent = currentPhrase.substring(0, charIndex - 1);
             charIndex--;
@@ -150,7 +159,7 @@ function initTypewriter() {
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
-    
+
     if (!mobileMenuBtn || !navMenu) return;
     mobileMenuBtn.addEventListener('click', () => {
         navMenu.classList.toggle('active');
@@ -202,17 +211,257 @@ function initActiveNavOnScroll() {
     }, options);
     sections.forEach(section => observer.observe(section));
 }
+/**
+ * project certificates
+ */
+document.addEventListener("DOMContentLoaded", () => {
+
+    const certificateModal = document.getElementById("certificateModal");
+    const certificateClose = document.getElementById("certificateClose");
+
+    const certModalImage = document.getElementById("certModalImage");
+    const certModalName = document.getElementById("certModalName");
+    const certModalOrg = document.getElementById("certModalOrg");
+    const certModalDate = document.getElementById("certModalDate");
+
+    const certificateButtons = document.querySelectorAll(".btn-view-cert");
+
+    // Open certificate
+    certificateButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const image = button.dataset.certImg;
+            const name = button.dataset.certName;
+            const organization = button.dataset.certOrg;
+            const date = button.dataset.certDate;
+
+            // Set certificate information
+            certModalImage.src = image;
+            certModalImage.alt = `${name} Certificate`;
+
+            certModalName.textContent = name;
+            certModalOrg.textContent = organization;
+            certModalDate.textContent = date;
+
+            // Show modal
+            certificateModal.classList.add("active");
+            document.body.classList.add("certificate-open");
+        });
+
+    });
+
+    // Close certificate
+    function closeCertificate() {
+        certificateModal.classList.remove("active");
+        document.body.classList.remove("certificate-open");
+
+        // Clear image after animation
+        setTimeout(() => {
+            certModalImage.src = "";
+        }, 300);
+    }
+
+    certificateClose.addEventListener("click", closeCertificate);
+
+    // Close when clicking outside modal
+    certificateModal.addEventListener("click", (event) => {
+
+        if (event.target === certificateModal) {
+            closeCertificate();
+        }
+
+    });
+
+    // Close with ESC key
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape" &&
+            certificateModal.classList.contains("active")) {
+
+            closeCertificate();
+        }
+
+    });
+
+});
+/* ==========================================
+  Certificate Modal
+========================================== */
+
+function initCertificateModal() {
+
+    const certificateModal =
+        document.getElementById("certificateModal");
+
+    const certificateClose =
+        document.getElementById("certificateClose");
+
+    const certModalImage =
+        document.getElementById("certModalImage");
+
+    const certModalName =
+        document.getElementById("certModalName");
+
+    const certModalOrg =
+        document.getElementById("certModalOrg");
+
+    const certModalDate =
+        document.getElementById("certModalDate");
+
+
+    // Check whether modal elements exist
+    if (
+        !certificateModal ||
+        !certificateClose ||
+        !certModalImage ||
+        !certModalName ||
+        !certModalOrg ||
+        !certModalDate
+    ) {
+        console.error("Certificate modal elements not found.");
+        return;
+    }
+
+
+    // Get all certificate buttons
+    const certificateButtons =
+        document.querySelectorAll(".btn-view-cert");
+
+
+    console.log(
+        "Certificate buttons found:",
+        certificateButtons.length
+    );
+
+
+    // Open certificate
+    certificateButtons.forEach(button => {
+
+        button.addEventListener("click", function (event) {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+
+            const image =
+                this.getAttribute("data-cert-img");
+
+            const name =
+                this.getAttribute("data-cert-name");
+
+            const organization =
+                this.getAttribute("data-cert-org");
+
+            const date =
+                this.getAttribute("data-cert-date");
+
+
+            console.log("Opening certificate:", image);
+
+
+            // Set certificate data
+            certModalImage.src = image || "";
+            certModalImage.alt =
+                `${name || "Certificate"} Certificate`;
+
+            certModalName.textContent =
+                name || "Certificate";
+
+            certModalOrg.textContent =
+                organization || "";
+
+            certModalDate.textContent =
+                date || "";
+
+
+            // Show modal
+            certificateModal.classList.add("active");
+
+            document.body.classList.add(
+                "certificate-open"
+            );
+
+        });
+
+    });
+
+
+    // Close modal
+    function closeCertificate() {
+
+        certificateModal.classList.remove("active");
+
+        document.body.classList.remove(
+            "certificate-open"
+        );
+
+    }
+
+
+    // Close button
+    certificateClose.addEventListener(
+        "click",
+        closeCertificate
+    );
+
+
+    // Click outside modal
+    certificateModal.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === certificateModal
+            ) {
+                closeCertificate();
+            }
+
+        }
+    );
+
+
+    // ESC key
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                certificateModal.classList.contains("active")
+            ) {
+                closeCertificate();
+            }
+
+        }
+    );
+
+
+    // Certificate image error
+    certModalImage.addEventListener(
+        "error",
+        function () {
+
+            console.error(
+                "Certificate image could not be loaded:",
+                this.src
+            );
+
+        }
+    );
+
+}
 /* ==========================================
    5. Interactive Contact Form Submission
    ========================================== */
 function initContactForm() {
     const form = document.getElementById('contactForm');
     const feedback = document.getElementById('formFeedback');
-    
+
     if (!form || !feedback) return;
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         const submitBtn = form.querySelector('.btn-submit');
         submitBtn.classList.add('loading');
         submitBtn.disabled = true;
@@ -220,7 +469,7 @@ function initContactForm() {
         setTimeout(() => {
             submitBtn.classList.remove('loading');
             submitBtn.disabled = false;
-            
+
             feedback.textContent = '⚡ Message successfully sent! Thank you for contacting me, I will get back to you shortly.';
             feedback.className = 'form-feedback success';
             form.reset();
@@ -317,7 +566,7 @@ function initProjectModals() {
     const modal = document.getElementById('projectModal');
     const closeBtn = modal ? modal.querySelector('.modal-close') : null;
     const overlay = modal ? modal.querySelector('.modal-overlay') : null;
-    
+
     if (!modal || !closeBtn || !overlay) return;
     // Simulation variables
     let simInterval = null;
@@ -387,7 +636,7 @@ function initProjectModals() {
         simTriggerBtn.innerHTML = '<i class="fa-solid fa-play"></i> Run Simulation';
         simTriggerBtn.classList.remove('running');
         simDataBox.textContent = 'System status: Idle. Awaiting MATLAB Simulink execution trigger.';
-        
+
         // Clear canvas
         simCtx.clearRect(0, 0, simCanvas.width, simCanvas.height);
     }
@@ -397,7 +646,7 @@ function initProjectModals() {
         simCanvas.style.display = 'block';
         simTriggerBtn.innerHTML = '<i class="fa-solid fa-stop"></i> Stop Simulation';
         simTriggerBtn.classList.add('running');
-        
+
         simCanvas.width = simCanvas.offsetWidth;
         simCanvas.height = simCanvas.offsetHeight;
         simInterval = setInterval(runSimulationFrame, 30);
@@ -586,27 +835,7 @@ function initProjectModals() {
             // Switch (MOSFET) line going down
             simCtx.moveTo(115, h * 0.4);
             simCtx.lineTo(115, h * 0.55);
-            // Toggle switch animation
-            const duty = 0.5; // 50%
-            const isSwitchClosed = Math.sin(simTime * 50) > 0;
-            if (isSwitchClosed) {
-                simCtx.lineTo(115, h * 0.65);
-                simCtx.fillStyle = '#00f2fe';
-                simCtx.fillRect(112, h * 0.54, 6, 6);
-            } else {
-                simCtx.lineTo(125, h * 0.62);
-            }
-            simCtx.moveTo(115, h * 0.65);
-            simCtx.lineTo(115, h * 0.7);
-            simCtx.lineTo(20, h * 0.7);
-            simCtx.moveTo(115, h * 0.7);
-            simCtx.lineTo(200, h * 0.7);
-            // Ground terminal
-            simCtx.moveTo(115, h * 0.7);
-            simCtx.lineTo(115, h * 0.75);
-            simCtx.moveTo(105, h * 0.75);
-            simCtx.lineTo(125, h * 0.75);
-            simCtx.stroke();
+
             // Plot V_out vs time curve on right
             const startX = 220;
             const plotW = w - startX - 20;
@@ -675,8 +904,8 @@ function initProjectModals() {
             // Track animation towards peak
             // The tracker dot starts low and climbs, then oscillates around MPP
             let trackX = graphX;
-            let trackingDone = false;
-            
+
+
             if (simTime < 6) {
                 // Tracking climb phase
                 trackX = graphX + (peakX - graphX) * (simTime / 6);
@@ -706,8 +935,6 @@ function initProjectModals() {
             simCtx.shadowColor = '#00f2fe';
             simCtx.shadowBlur = 10;
             simCtx.fill();
-            simCtx.shadowBlur = 0; // reset
-            // Status message
             const watts = (trackNormY * 250).toFixed(1);
             const volts = (trackNormX * 36).toFixed(1);
             const status = trackingDone ? 'MPP Locked (Oscillating)' : 'Searching Peak...';
